@@ -1,0 +1,303 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, letter]{article}
+\usepackage{fontspec} 
+
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.2in, textheight=8.5in, 
+right=70pt,left=110pt,
+top=1in,bottom=1in,
+marginparsep=15pt, 
+marginparwidth=1in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+
+%% Additional packages
+\usepackage{academicons}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\usepackage{lastpage}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\newcommand{\myname}[1]{\textbf{Rattanasriampaipong, R.}}
+
+\usepackage{etaremune}
+\usepackage{enumitem}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
+\usepackage{xcolor}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\small #1}}
+\renewcommand*{\raggedrightmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+% ---- MARGIN TEXT
+\newcommand{\margintext}[1]{\marginnote{\normalsize\textbf #1 |}}
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Ronnakrit Rattanasriampaipong - CV},
+	% pdfauthor={My name},
+	% pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{
+  colorlinks,
+  citecolor=Black,
+  linkcolor=Black,
+  urlcolor=Black}
+
+% DOCUMENT
+\begin{document}\thispagestyle{empty}
+\textsc{\LARGE Ronnakrit Rattanasriampaipong}\\
+\textsc{Curriculum Vitae} \hfill (\textit{updated \today})\\
+
+\margintext{Address}Department of Geosciences, Gould-Simpson Building, Room 513A\\1040 E. 4th St., Tucson, AZ 85721
+U.S.A.\\
+
+\margintext{Contact} \href{mailto:rrattan@ucar.edu}{rrattan@ucar.edu} | \href{mailto:ronnakritr@arizona.edu}{ronnakritr@arizona.edu} 
+\\
+
+%% RESEARCH INTERESTS
+\margintext{Research Interests}
+Mesozoic–Cenozoic Paleoceanography \& Paleoclimatology, Archaeal Lipid Biomarker, Marine Ammonia Oxidizing Archaea, Archaeal Ecology \& Evolution \\
+
+%% APPOINTMENTS
+\margintext{Appointments}
+\textsc{The University of Arizona} \hfill Tucson, AZ \\
+\textbf{2023–} \quad \emph{NOAA Climate \& Global Change Postdoctoral Fellow} \\
+
+%% EDUCATION
+\margintext{Education}
+\textsc{Texas A\&M University} \hfill College Station, TX \\
+\textbf{2018–2023} \quad Ph.D. in Oceanography \\
+Specialization | Paleoceanography \& Organic Geochemistry \\
+
+\textsc{Chulalongkorn University} \hfill Bangkok, THA \\
+\textbf{2015–2016} \quad M.S. in Petroleum Geoscience\\
+\textbf{2009–2013} \quad B.S. in Geology\\
+
+\pagestyle{fancy}
+%% Footer formatting
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{Rattanasriampaipong, R. | 
+\thepage\ of \pageref{LastPage}
+}
+
+%% PUBLICATIONS
+\margintext{Publications} \textsc{Manuscript in preparation}
+\begin{enumerate}[noitemsep,nolistsep]
+\nobibliography{references}
+\item[3.] \bibentry{Rattanasriampaipong_MOB_inprep}
+\end{enumerate}
+
+\bigskip
+\textsc{Published refereed journals}
+\begin{etaremune}
+\item \bibentry{Judd2022TheData}
+\item \bibentry{Rattanasriampaipong2022}
+\end{etaremune}
+
+%% AWARDS, HONORS
+\margintext{Awards}
+\textsc{Fellowships, Scholarships \& Awards}
+\begin{itemize}[leftmargin=*]
+    \item[] \emph{NOAA Climate \& Global Change Postdoctoral Fellowship}, UCAR | CPAESS, 2023–2025
+    \item[] \emph{Texas A\&M Dissertation Fellowship}, Texas A\&M University, 2023–2024
+    \item[] \emph{Texas Sea Grant's Grants-In-Aid}, Texas Sea Grant, 2022–2024
+    \item[] \emph{Schlanger Ocean Drilling Fellowship}, U.S. Science Support Program (USSSP) associated with the International Ocean Discovery Program (IODP), 2021–2022
+    \item[] \emph{Fulbright Thai Graduate Scholarship}, Thailand-U.S. Education Foundation (TUSEF), Fulbright Thailand, 2018–2020
+    \item[] \emph{Champion of The Hitachi Trophy 2013 Senior Project Competition}, ``won first place in Physical Science of the annual scientific pitching competition for all senior year students in the Faculty of Science," Chulalongkorn University, April 2013
+    \item[] \emph{Chevron Thailand Graduate Scholarship}, Chevron Thailand, 2015–2016
+    \item[] \emph{Chevron Undergraduate Scholarship}, Chevron Thailand, 2012–2013
+    \item[] \emph{Mitsui Oil Exploration Company (MOECO) Undergraduate Scholarship}, MOECO, 2011–2013 
+
+\end{itemize}
+
+\bigskip
+\textsc{Honors}
+\begin{itemize}[leftmargin=*]
+    \item[] Invited student speaker to give a reception speech at the Annual AGU Student Travel Grant Luncheon, AGU Fall Meeting, Chicago, IL, December 12th, 2022.
+    \item[] Invited student speaker to give a reception speech at the Award Recognition Ceremony, Ministry of Foreign Affairs, Bangkok, June 6th, 2018.
+    
+
+\end{itemize}
+
+
+%% PRESENTATIONS
+\margintext{Presentations} 
+\textsc{Academic \& Scientific Conferences}
+\begin{etaremune}
+\item {\myname{rattanasriampaipong}}, Zhang, Y. G., Alo, O., Liu, X. L., Zhang, Y., Kim, B., Marcantonio, F., and Bassinot, F. (2023, December). \textit{Bacterial tetraether lipids as a proxy for ocean (de)oxygenation}, Abstract (PP33B-04) presented at the 2023 AGU Fall Meeting, Moscone Center, San Francisco, CA, USA.
+
+\item {\myname{rattanasriampaipong}}, Zhang, Y. G., Pearson, A., Hedlund, B., and Zhang, S (2022, December). \textit{Archaeal lipids suggest ecological shifts of marine ammonia-oxidizing archaea in greenhouse worlds}, Abstract (PP13C-04) presented at the 2022 AGU Fall Meeting, McCormick Place Convention Center, Chicago, IL, USA.
+
+\item {\myname{rattanasriampaipong}}, Zhang, Y. G., Pearson, A., Hedlund, B., and Zhang, S (2022, April). \textit{Tracing ecology and evolution of marine ammonia-oxidizing archaea using archaeal lipid biomarkers}. Oral presentation for the departmental seminar at the Department of Oceanography, Texas A\&M University, TX, USA.
+
+\item {\myname{rattanasriampaipong}}, Zhang, Y. G., Pearson, A., and Hedlund, B. (2021, December). \textit{Beyond TEX86: GDGTs Inform Marine Archaeal Community Ecology and Evolution}. Oral presentation (hybrid) at the 2021 AGU Fall Meeting, Ernest N. Morial Convention Center, New Orleans, LA, USA.
+
+\item {\myname{rattanasriampaipong}}, Zhang, Y. G., Pearson, A., Hedlund, B., and Zhang, S. (2021, September). \textit{Beyond TEX86: GDGT Distributions Inform Archaeal Ecology}. Lightning (3-minute) oral presentation at the 2021 PhanTASTIC Workshop.
+
+\item {\myname{rattanasriampaipong}} (2021, April). \textit{Closing the gaps of Cenozoic sea surface temperature history using tetraether archaeal lipid biomarkers}. Oral presentation for the departmental seminar at the Department of Oceanography, Texas A\&M University, TX, USA.
+
+\item {\myname{rattanasriampaipong}} and Zhang, Y. G. (2019, December). Towards complete global sea surface temperature reconstructions over the Cenozoic Era. Poster presentation at the 2019 AGU Fall Meeting, Moscone Center, San Francisco, CA, USA.
+
+\item {\myname{rattanasriampaipong}} (2013, April). \textit{Quantification of Tsunami Magnitude from Sedimentation Modeling of Re-occurring Indian Ocean Tsunamiites at Phra Thong Island, Phang Nga, Thailand}. Oral Presentation at the annual Hitachi Senior Project Competition, Faculty of Science, Chulalongkorn University, Thailand.
+\end{etaremune}
+
+\textsc{Industry}
+\begin{etaremune}
+\item {\myname{rattanasriampaipong}},  Marksamer, A., and Kantatong, P. (2018, April). \textit{A new approach for pore pressure prediction using neutron-density log separation}. Oral presentation at the 2019 Sub-Surface Technical Forum, Chevron Thailand Headquarter, Bangkok, Thailand.
+
+\item {\myname{rattanasriampaipong}}, Paiboon, P., and Thatmali, P. (2015, February). \textit{Pattani Basin Regional Pore Pressure Study}. Oral Presentation at the annual meeting of Chevron Thailand Reservoir Management Forum, Swissotel Le Concorde, Bangkok, Thailand.
+
+\item {\myname{rattanasriampaipong}}, Kananithikorn, N., Keawmoon, N., and Prasongtham, P. (2014, June). \textit{Causes of ballooning and lost circulation in Erawan and Satun fields}. Poster session presented at the bi-annual meeting of Chevron Reservoir Management Forum, The Woodlands Waterway Marriott Hotel, Houston, TX, USA
+\item {\myname{rattanasriampaipong}}, Kananithikorn, N., Keawmoon, N., and Prasongtham, P. (2014, April). 
+\textit{Causes of ballooning and lost circulation in Erawan and Satun fields}. Oral Presentation at the annual meeting of Chevron Thailand Reservoir Management Forum, Renaissance Hotel, Bangkok, Thailand.
+
+\end{etaremune}
+
+%% TALKS & LECTURES
+\margintext{Invited Talks \& Lectures}
+\textsc{Conducted in English}
+\begin{etaremune}
+
+\item \textit{Archaeal lipids trace ecology and evolution of marine ammonia-oxidizing archaea}, the geobiology session Where Rock Meets Life: Geobiology of Modern and Ancient Aquatic Ecosystems at the 50th SACNAS NDiSTEM, Portland Convention Center, Portland, OR, \textit{October 28, 2023. Talk.}
+
+\item \textit{Marine AOA ecology shifts with Earth’s climate} (\href{https://tamucs-my.sharepoint.com/:b:/g/personal/rrattan_tamu_edu/EZQsnDcppXpAkxq9H8E_L1YBK_Jnd2zL1lPQwsRLIZZ_xw?e=ilpAa1}{slides}), The 2nd International GDGT Workshop, ETH Zurich, \textit{September 8, 2023. Talk.}
+
+\item \textit{Archaeal lipids reveal distinct AOA ecology in past warm oceans} (\href{https://tamucs-my.sharepoint.com/:b:/g/personal/rrattan_tamu_edu/ET9FxsRS79dBv4giDLNmCKIB0X_tnPspwI18D1e8uKEFLw?e=6On32v}{slides}), Modern Geobiology Lecture Series, Department of Ocean Science and Engineering, Southern University of Science and Technology (SUSTech), \textit{June 12, 2023. Talk.}
+
+\item \textit{A suppression of deep-water clades of marine ammonia oxidizers in past warm oceans}, Biology and Paleo Environment (BPE) Fall 2022 Seminar Series, Lamon-Doherty Earth Observatory (LDEO), Columbia University, \textit{October 24th, 2022. Talk.}
+
+\item \textit{Untapped potential of archaeal lipids beyond ocean temperature reconstructions} (\href{https://www.youtube.com/watch?v=95o7ogv_T9I}{recording}), The Pal(a)eo EaRly Career Seminar (Pal(a)eoPERCS), Virtual Seminar, \textit{October 11th, 2022. Talk.}
+
+\item 2021–22 Schlanger Ocean Drilling Student Fellow Research Talks, 2022 Summer Meeting of the U.S. Advisory Committee for Scientific Ocean Drilling (USAC), American Museum of Natural History, NY, \textit{July 25th, 2022. Talk.}
+
+\item \textit{The Anthropocene: Human Footprints on Planet Earth} (\href{https://docs.google.com/presentation/d/1XTTknlXZghoFSpxdI-8KNPqmwrOvbwUQ9sDqNNvJDf0/edit?usp=sharing}{slides}), Marine Science Department, Chulalongkorn University, one lecture for Global Biogeochemical Cycles, Course instructor: Dr. Chawalit ``Net" Chareonpong, \textit{December 8th, 2021. Lecture.}
+\end{etaremune}
+
+\textsc{Conducted in English}
+\begin{etaremune}
+\item \textit{Ammonia Oxidizers in Past Warm Oceans} (\href{https://tamucs-my.sharepoint.com/:b:/g/personal/rrattan_tamu_edu/ESdkQzE0k-xNufbKOW7oMxwBUtcPdXOOMauWxMsfEqFgkA?e=Xk2nDl}{slides}), Department of Earth Sciences, Kasetsart University, one lecture for Dynamic Biosphere, Course instructor: Dr. Chatchalerm ``Kendo" Ketwetsuriya. \textit{January 10th, 2023. Lecture.}
+
+\item \textit{Inferred paleoecology of marine archaea from today's oceans} (\href{https://fb.watch/grZcLZQSbV/}{recording}), Department of Marine Technology, Burapha University, Virtual Marine Technology Colloquium \#62, \textit{October 28th, 2022. Talk.}
+
+\item \textit{Life after resignation: `Fulbright' has so much to offer} (\href{https://www.canva.com/design/DAE4hfYUXJk/3E9PACt31gAkqAKfjnURkg/edit?utm_content=DAE4hfYUXJk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton}{slides}), Department of Geology, Faculty of Science, Chulalongkorn University, Virtual seminar, \textit{February 18th, 2022. Talk.}
+
+\item \textit{Fossil lipids: Thermometers for the Earth's climate history} (\href{https://www.facebook.com/watch/?v=405982837057621}{recording}), Department of Marine Technology, Burapha University, Virtual Marine Technology Colloquium \#26, \textit{September 24th, 2020. Talk.}
+
+\end{etaremune}
+
+%% Teaching
+\margintext{Teaching}
+\textsc{Department of Oceanography, Texas A\&M University} \hfill College Station, TX \\
+\textbf{Undergraduate Classes} \textit{(Class Size/Instructor Rating)} \\
+\footnotesize 
+Rating of \textit{``the instructor fostered an effective learning environment."}\\
+Scale: 1 (Strongly Disagree) to 5 (Strongly Agree) \\
+
+\normalsize
+\textsc{Graduate Assistant Lecturer} \\
+The Blue Planet - Our Oceans (OCNG 251) \\
+\textit{Spring 2021 (116/4.78), Summer 2021 (36/4.86), Summer 2022 (48/4.64), Fall 2022 (194/4.41)}
+
+\bigskip
+\textsc{Graduate Assistant - Teaching} \\
+The Blue Planet - Our Oceans (OCNG 251) \\
+\textit{Spring 2023 (300/3.72)} \\
+Data Analysis Methods in Geosciences (GEOS 470) \\
+\textit{Spring 2023 (30/5.00)} \\
+
+%% MENTORING
+\margintext{Mentoring}
+\textsc{Department of Oceanography, Texas A\&M University} \hfill College Station, TX \\
+\textsc{\textbf{Zhang Lab Mentor}} \textbf{(2021–2023)}\\
+\footnotesize 
+{\color{gray} Responsibilities: Trained on-campus and visiting undergraduate students on sample preparation (marine muds from ocean drilling programs) and lab procedures for archaeal lipid biomarker (specifically GDGTs) LC-MS analysis. Hands-on trainings are included, but not limited to: (1) freeze-drying samples, (2) homogenizing samples for total lipid extract (TLE) extraction using an Accelerated Solvent Extractor (ASE), (3) setting ACE methods, (4) purifying samples for LC-MS analysis (cellulose filtering and silica-gel column chromatography)}
+
+\normalsize
+\bigskip
+Undergraduate Student Mentees \\
+Connor Wood (TAMU | Fall 2022–Spring 2023), Roy Jui-Yu Huang (Emory U | Summer 2022), Ray Tarpey (TAMU | Spring 2022), Natalie York (TAMU | Fall 2021) \\
+
+\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, THA \\
+\textsc{\textbf{Geology Mentor}} \textbf{(2014–2015)}\\
+\footnotesize 
+{\color{gray} Responsibilities: Trained two new-hired geologists on geology-related works for targeting hydrocarbon in Gomin D drilling project such as wireline logging interpretation, stratigraphic correlation, pore pressure prediction, and basic of well design, to achieve safe-and-effective drilling operations} \\
+
+\normalsize
+%% Leadership
+\margintext{Leaderships}
+\textsc{\textbf{Co-founder and Moderator}} | \textsc{Thai Earth and Planetary Scientists in North America} \\
+Hosted and moderated semi-monthly discussions about earth and space sciences research for Thai students in the US who study earth and planetary sciences, May 2020–December 2020
+
+\bigskip
+\textsc{\textbf{Student President}} | \textsc{Undergraduate Geology Student Union} \\
+Department of Geology, Faculty of Science, Chulalongkorn University
+
+\bigskip
+%% OUTREACH
+\margintext{Outreach}
+\textsc{Press and Media}\\
+\textsc{Interviewed Articles in English}
+\begin{etaremune}
+\item \textit{Brave the World} (\href{https://issuu.com/fulbrightthailand/docs/storeis_fo_fulbrighters_impact}{online article}), Fulbright Thailand, Stories of Fulbrighters’ Impact—70th Anniversary of the Fulbright Program in Thailand, \textit{December 24th, 2021.}
+\end{etaremune}
+
+\textsc{Interviewed Articles in Thai}
+\begin{etaremune}
+\item \textit{Talk with Fulbrighter: Ronnakrit Rattanasriampaipong} (\href{https://www.fulbrightthai.org/fulbright-stories/khuykab-fulbrighter-rnkrsdi-ratnsrii-amaiphphngs}{online article}), Fulbright Thailand, \textit{May 18th, 2022.}
+\item \textit{Recommended Field of Study: Paleoclimatology/Paleoceanography} (\href{https://www.fulbrightthai.org/knowledge-sharing/saakhaa-yaakaenanam-1-paleoclimatology-paleoceanography}{online article}), Fulbright Thailand, \textit{December 8th, 2021.}
+\item \textit{Fulbright in My View} (\href{https://anyflip.com/afeb/buat/?fbclid=IwAR08dv9XF7UCimtM9SjwICdCSwSQfuTHNtPbbaepT4WZlTcNRXB9eNtUsi8}{online article}), Fulbright Thailand, Fulbright Experiences, \textit{October 6th, 2021.}
+\item \textit{A journey without a map} (\href{https://www.facebook.com/ThaiScienceScholars/photos/a.114754726700839/170670231109288/?type=3}{online article}), The Science Scholars Facebook page, \textit{June 16th, 2020.}
+\end{etaremune}
+
+\textsc{Panel Discussions in Thai}
+\begin{etaremune}
+\item \textit{Fulbright Thai Graduate Scholarship (TGS): More Than Just a Scholarship} (\href{https://fb.watch/iLwkVkeNjJ/}{recording}), Thailand–United States Educational Foundation (Fulbright Thailand), Virtual event, \textit{February 17th, 2023.}
+\item \textit{Meet the Fulbrighter Series: Study Pure \& Applied Science in the U.S.} (\href{https://www.facebook.com/watch/?v=192470062421053}{recording}), Fulbright Thailand, Virtual event, \textit{March 31st, 2021.}
+\item \textit{Meet the Fulbrighter Series: Doctoral Studies in the U.S.} (\href{https://www.facebook.com/watch/?v=1018096972055863}{recording}), Fulbright Thailand, Virtual event,\textit{ March 5th, 2021.} 
+
+\end{etaremune}
+
+\bibliographystyle{apalike}
+\end{document}
