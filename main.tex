@@ -50,6 +50,7 @@ marginparwidth=1in}
 \renewcommand{\dateseparator}{--}
 \usepackage{xcolor}
 \usepackage[inkscapeformat=png]{svg}
+\usepackage{amsmath}
 
 % ---- CUSTOM COMMANDS
 \chardef\&="E050
@@ -101,7 +102,7 @@ U.S.A.\\
 \href{https://www.researchgate.net/profile/Ronnakrit-Rattanasriampaipong?ev=hdr_xprf}{\aiResearchGate} 
 \href{https://scholar.google.com/citations?user=AGcBWlAAAAAJ&hl=en}{\aiGoogleScholar} 
 \href{https://www.scopus.com/authid/detail.uri?authorId=57826548100}{\aiScopus}
-\href{https://www.webofscience.com/wos/author/record/HNT-0738-2023}{\includesvg[width=0.1in]{clarivate.svg}}
+% \href{https://www.webofscience.com/wos/author/record/HNT-0738-2023}{\includesvg[width=0.1in]{clarivate.svg}}
 \href{https://orcid.org/0000-0002-1425-8737}{\aiOrcid} 
 \href{https://github.com/PaleoLipidRR}{\faicon{github}}
 
@@ -111,30 +112,28 @@ U.S.A.\\
 %% RESEARCH INTERESTS
 \bigskip
 \margintext{Research Interests}
-Proxy System Modeling, Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker, Marine Ammonia Oxidizing Archaea, Archaeal Ecology and Evolution
+Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker, Marine Ammonia Oxidizing Archaea, Archaeal Ecology and Evolution, Proxy System Modeling, Paleoclimate Data Assimilation
 
 %% APPOINTMENTS
 \bigskip
-\margintext{Appointment}
+\margintext{Appointments}
+
+
 \textsc{The University of Arizona} \hfill Tucson, AZ \\
-2023–present \quad NOAA Climate \& Global Change Postdoctoral Fellow \\
-\textit{Mentor: Jessica Tierney}
+2023-- \hspace{0.1cm} NOAA Climate \& Global Change Postdoctoral Fellow
+% \textit{Mentor: Jessica Tierney}
 
 %% EDUCATION
 \bigskip
 \margintext{Education}
 \textsc{Texas A\&M University} \hfill College Station, TX \\
 \textbf{2023} \quad Ph.D. in Oceanography (Paleoceanography/Organic Geochemistry) \\
-\textit{Dissertation Committee Chair: Yige Zhang \\
-Committee Members: Ethan Grossman, Robert Korty, Jason Sylvan \\}
 
-\textsc{Chulalongkorn University} \hfill Bangkok, THA \\
+\textsc{Chulalongkorn University} \hfill Bangkok, Thailand \\
 \textbf{2016} \quad M.S. in Petroleum Geoscience (International Program)\\
-\textit{Advisor: John K. Warren} \\
 
-\textsc{Chulalongkorn University} \hfill Bangkok, THA \\
-\textbf{2013} \quad B.S. in Geology \\
-\textit{Advisor: Kruawun Jankaew}
+\textsc{Chulalongkorn University} \hfill Bangkok, Thailand \\
+\textbf{2013} \quad B.S. in Geology 
 
 \pagestyle{fancy}
 
@@ -286,7 +285,7 @@ Data Analysis Methods in Geosciences (GEOS 470) \\
 \bigskip
 Undergraduate Student Mentees: \textit{Connor Wood (TAMU | Fall 2022–Spring 2023), Roy Jui-Yu Huang (Emory University | Summer 2022), Ray Tarpey (TAMU | Spring 2022), Natalie York (TAMU | Fall 2021)} \\
 
-\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, THA \\
+\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, Thailand \\
 \textsc{\textbf{Geology Mentor}} | \textsc{Accelerated Earth Scientist Orientation Program (AESOP)}, 2014–15 \\
 \footnotesize 
 {\color{gray} Responsibilities: Trained two new-hired geologists on geology-related works for targeting hydrocarbon in Gomin D drilling project such as wireline logging interpretation, stratigraphic correlation, pore pressure prediction, and basic of well design, to achieve safe-and-effective drilling operations}
@@ -352,9 +351,65 @@ Department of Geology, Faculty of Science, Chulalongkorn University
 \end{etaremune}
 
 \bigskip
+%% Previous Research Experience
+\margintext{Previous Research Experience}
+\textsc{Department of Oceanography, Texas A\&M University} \hfill College Station, TX \\
+\textsc{\textbf{Doctoral Dissertation Research}}, 2018–23 \\
+Advisor \& Committee Chair: Yige Zhang \\ 
+Committee Members: Ethan Grossman, Robert Korty, Jason Sylvan \\
+
+\textbf{\textsc{Research Title:}} \\
+\textit{Beyond TEX$_{86}$: Evaluating Archaeal Evolution Coupled with Oceans and Climate Changes using Tetraether Lipids} \\
+
+\textbf{\textsc{Chapter 1.}} Towards continuous sea surface temperature records inferred from archaeal lipids over the past 66 million years
+\begin{itemize}[leftmargin=*]
+    \item Identified spatio-temporal gaps in publicly available Cenozoic TEX86 records
+    \item Collected core samples at Gulf Coast Repository (GCR) (College Station, TX) for lipid biomarker analysis (multiple visits)
+    \item Conducted analytical work for coarse-resolution SST reconstructions from ten ODP/IODP sites
+    \item Revisiting temperature calibrations with the new insight into the evolution of marine AOA paleoecology
+\end{itemize}   
+
+\bigskip
+\textbf{\textsc{Chapter 2.}} Archaeal lipids trace ecology and evolution of marine ammonia-oxidizing archaea
+\begin{itemize}[leftmargin=*]
+    \item Compiled and quality controlled an extensive dataset (n = $\approx$4,000 entries from 79 publications) of isoprenoidal glycerol dialkyl glycerol tetraethers (GDGTs) derived from different archives
+    \item Identified diagnostic distribution patterns of GDGT assemblages that trace marine archaeal ecology and evolution
+    \item Utilized modern statistical analyses and unsupervised clustering algorithms
+\end{itemize}    
+
+
+\textbf{\textsc{Chapter 3.}} Investigating changes of oxygen in past oceans through the lens of lipid biomarkers
+\begin{itemize}[leftmargin=*]
+    \item Investigating the potential of overly-branched (OB-), branched (B-), and sparsely-branched (SB-) GDGTs as a proxy for oxygen deoxygenation events in past oceans
+    \item Integrating available archaeal lipid data with gridded World Ocean Atlas (WOA) datasets, including temperature and oxygen, to extract modern-day distributions of the known range of glycerol ether lipids in several settings, including Black Sea, Arabian Sea, Eastern Equatorial Pacific (EEP)
+\end{itemize}  
+
+\bigskip
+\textsc{Department of Geology, Chulalongkorn University} \hfill Bangkok, Thailand \\
+Advisor: John Warren \\
+
+\textbf{\textsc{Research Title:}} \\
+\textit{Potential Sources of Mercury in Southern Pattani Basin, the Gulf of Thailand} 
+
+\begin{itemize}[leftmargin=*]
+    \item Conducted the first geological assessment of mercury-contaminated produced hydrocarbon in the Gulf of Thailand with multi-disciplinary data including C-O isotopic analysis in siliciclastic cuttings
+    \item Established and applied C-O isotopic analysis to siliciclastic cuttings
+    \item Established correlation of Hg-CO2 for multiple scales; from reservoirs to platforms scale
+\end{itemize}  
+
+\bigskip
+\textsc{Department of Geology, Chulalongkorn University} \hfill Bangkok, Thailand \\
+\textsc{\textbf{Undergraduate Senior Year Research}}, 2011–13 | \textit{``Quantification of Tsunami Magnitude from Sedimentation Modeling of Re-occurring Indian Ocean Tsunamiites at Phra Thong Island, Phang Nga, Thailand"} | Advisor: Kruawun Jankaew
+\begin{itemize}[leftmargin=*]
+    \item Tsunami sample preparation for grain size analysis, Earth Observatory of Singapore (EOS), Nanyang Technological University (NTU), Singapore, May 2013
+    \item Fieldwork and sample collection of tsunami sediments, Phrathong Island, Phang-nga, Thailand, June 2011 - July 2013 (multiple field campaigns)
+    \item Collaborated with research teams from EOS-NTU and Stockholms Universitet
+\end{itemize}  
+
+\bigskip
 %% Professional Experience
 \margintext{Professional Experience}
-\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, THA \\
+\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, Thailand \\
 \textsc{\textbf{Development Geologist}} | \textsc{Satun-Funan Asset Team}, 2016–18 \\
 \textsc{\textbf{Horizons Earth Scientist}} | \textsc{AESOP}, 2013–15
 
@@ -385,54 +440,6 @@ Highlighted Responsibilities:
 \end{itemize}
 
 \bigskip
-%% Previous Research Experience
-\margintext{Previous Research Experience}
-\textsc{Department of Oceanography, Texas A\&M University} \hfill College Station, TX \\
-\textsc{\textbf{Doctoral Dissertation Research}}, 2018–23 | \textit{``Beyond TEX86: Evaluating Archaeal Evolution Coupled with Oceans and Climate Changes using Tetraether Lipids"} | Advisor: Yige Zhang \\
-
-\textbf{\textsc{Chapter 1.}} Towards continuous sea surface temperature records inferred from archaeal lipids over the past 66 million years
-\begin{itemize}[leftmargin=*]
-    \item Identified spatio-temporal gaps in publicly available Cenozoic TEX86 records
-    \item Collected core samples at Gulf Coast Repository (GCR) (College Station, TX) for lipid biomarker analysis (multiple visits)
-    \item Conducted analytical work for coarse-resolution SST reconstructions from ten ODP/IODP sites
-    \item Revisiting temperature calibrations with the new insight into the evolution of marine AOA paleoecology
-\end{itemize}   
-
-\bigskip
-\textbf{\textsc{Chapter 2.}} Archaeal lipids trace ecology and evolution of marine ammonia-oxidizing archaea
-\begin{itemize}[leftmargin=*]
-    \item Compiled and quality controlled an extensive dataset (n = $\approx$4,000 entries from 79 publications) of isoprenoidal glycerol dialkyl glycerol tetraethers (GDGTs) derived from different archives
-    \item Identified diagnostic distribution patterns of GDGT assemblages that trace marine archaeal ecology and evolution
-    \item Utilized modern statistical analyses and unsupervised clustering algorithms
-\end{itemize}    
-
-
-\textbf{\textsc{Chapter 3.}} Investigating changes of oxygen in past oceans through the lens of lipid biomarkers
-\begin{itemize}[leftmargin=*]
-    \item Investigating the potential of overly-branched (OB-), branched (B-), and sparsely-branched (SB-) GDGTs as a proxy for oxygen deoxygenation events in past oceans
-    \item Integrating available archaeal lipid data with gridded World Ocean Atlas (WOA) datasets, including temperature and oxygen, to extract modern-day distributions of the known range of glycerol ether lipids in several settings, including Black Sea, Arabian Sea, Eastern Equatorial Pacific (EEP)
-\end{itemize}  
-
-\bigskip
-\textsc{Department of Geology, Chulalongkorn University} \hfill Bangkok, THA \\
-\textsc{\textbf{Masters Thesis Research}}, 2016 | \textit{``Potential Sources of Mercury in Southern Pattani Basin, the Gulf of Thailand"} | Advisor: John Warren 
-
-\begin{itemize}[leftmargin=*]
-    \item Conducted the first geological assessment of mercury-contaminated produced hydrocarbon in the Gulf of Thailand with multi-disciplinary data including C-O isotopic analysis in siliciclastic cuttings
-    \item Established and applied C-O isotopic analysis to siliciclastic cuttings
-    \item Established correlation of Hg-CO2 for multiple scales; from reservoirs to platforms scale
-\end{itemize}  
-
-\bigskip
-\textsc{Department of Geology, Chulalongkorn University} \hfill Bangkok, THA \\
-\textsc{\textbf{Undergraduate Senior Year Research}}, 2011–13 | \textit{``Quantification of Tsunami Magnitude from Sedimentation Modeling of Re-occurring Indian Ocean Tsunamiites at Phra Thong Island, Phang Nga, Thailand"} | Advisor: Kruawun Jankaew
-\begin{itemize}[leftmargin=*]
-    \item Tsunami sample preparation for grain size analysis, Earth Observatory of Singapore (EOS), Nanyang Technological University (NTU), Singapore, May 2013
-    \item Fieldwork and sample collection of tsunami sediments, Phrathong Island, Phang-nga, Thailand, June 2011 - July 2013 (multiple field campaigns)
-    \item Collaborated with research teams from EOS-NTU and Stockholms Universitet
-\end{itemize}  
-
-\bigskip
 %% Cruise/Field Exprience
 \margintext{Cruise/Field Experience}
 \textsc{Department of Oceanography, Texas A\&M University} \hfill College Station, TX \\
@@ -444,7 +451,7 @@ Highlighted Responsibilities:
 \end{itemize}  
 
 \bigskip
-\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, THA \\
+\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, Thailand \\
 \textsc{\textbf{Shore-based Operational Geologist}}, July–December 2017
 \begin{itemize}[leftmargin=*]
     \item Two infill projects in Jakrawan Gas Field: 20 wells drilled with 90\% accuracy between pre-drill and post-drill hydrocarbon reserves estimations
@@ -453,7 +460,7 @@ Highlighted Responsibilities:
 \end{itemize} 
 
 \bigskip
-\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, THA \\
+\textsc{Chevron Thailand Exploration and Production Limited} \hfill Bangkok, Thailand \\
 \textsc{\textbf{Wellsite Geologist Trainee }}, November 2nd–13th, 2014
 \begin{itemize}[leftmargin=*]
     \item Observed and learned real-time drilling operations at Moragot E platform, Moragot gas field, the Gulf of Thailand
