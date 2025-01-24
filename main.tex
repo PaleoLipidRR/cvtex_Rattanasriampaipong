@@ -12,13 +12,15 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[10pt, letter]{article}
+\documentclass[10pt]{article}
+\usepackage{iftex}
+\usepackage{xcolor}
+\definecolor{Black}{rgb}{0,0,0}
 \usepackage{fontspec} 
-
 
 % DOCUMENT LAYOUT
 \usepackage{geometry} 
-\geometry{letterpaper, textwidth=5.2in, textheight=8.5in, 
+\geometry{letterpaper,
 right=70pt,left=100pt,
 top=1in,bottom=1in,
 marginparsep=15pt, 
@@ -26,11 +28,10 @@ marginparwidth=1in}
 \setlength\parindent{0in}
 
 % FONTS
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Linux Libertine O}
 
 %% Additional packages
 \usepackage{academicons}
@@ -48,7 +49,7 @@ marginparwidth=1in}
 \usepackage{enumitem}
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{--}
-\usepackage{xcolor}
+
 \usepackage[inkscapeformat=png]{svg}
 \usepackage{amsmath}
 
@@ -69,6 +70,8 @@ marginparwidth=1in}
 
 % HEADINGS
 \usepackage{sectsty} 
+\let\customunderline\relax
+\DeclareRobustCommand{\customunderline}[1]{\leavevmode\vbox{\hrule height 0.4pt\kern0.2ex\hbox{#1}\kern0.2ex\hrule height 0.4pt}}
 \usepackage[normalem]{ulem} 
 \sectionfont{\mdseries\upshape\Large}
 \subsectionfont{\mdseries\scshape\normalsize} 
@@ -89,23 +92,25 @@ marginparwidth=1in}
   urlcolor=Black}
 
 % DOCUMENT
-\begin{document}\thispagestyle{empty}
+\begin{document}\thispagestyle{empty}\newcommand{\myunderbar}[1]{\textunderline{#1}}
 \textsc{\LARGE Ronnakrit \textbf{Rattanasriampaipong}} \hfill \textsc{Curriculum vitae}\\
 \textsc{NOAA Climate \& Global Change Postdoctoral Fellow} \hfill (\textit{updated \today})\\
 
-Gould-Simpson Building, Room 513A\\
-Department of Geosciences, The University of Arizona \\
+Gould-Simpson Building, Room 513A \hfill \href{mailto:rrattan@ucar.edu}{rrattan@ucar.edu} \\
+Department of Geosciences, The University of Arizona \hfill  \href{mailto:ronnakritr@arizona.edu}{ronnakritr@arizona.edu} \\
 1040 E. 4th St., Tucson, AZ 85721
-U.S.A.\\
-
-\href{mailto:rrattan@ucar.edu}{rrattan@ucar.edu} | \href{mailto:ronnakritr@arizona.edu}{ronnakritr@arizona.edu} \\
-\href{https://www.researchgate.net/profile/Ronnakrit-Rattanasriampaipong?ev=hdr_xprf}{\aiResearchGate} 
+U.S.A. \hfill \href{https://www.researchgate.net/profile/Ronnakrit-Rattanasriampaipong?ev=hdr_xprf}{\aiResearchGate} 
 \href{https://scholar.google.com/citations?user=AGcBWlAAAAAJ&hl=en}{\aiGoogleScholar} 
 \href{https://www.scopus.com/authid/detail.uri?authorId=57826548100}{\aiScopus}
 % \href{https://www.webofscience.com/wos/author/record/HNT-0738-2023}{\includesvg[width=0.1in]{clarivate.svg}}
 \href{https://orcid.org/0000-0002-1425-8737}{\aiOrcid} 
 \href{https://github.com/PaleoLipidRR}{\faicon{github}}
+\noindent\makebox[\linewidth]{{\color{lightgray}\rule{\textwidth}{0.05pt}}}
 
+
+% %% Profession Summary
+% \bigskip
+% \margintext{Summary}
 
 
 
@@ -117,8 +122,6 @@ Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker,
 %% APPOINTMENTS
 \bigskip
 \margintext{Appointments}
-
-
 \textsc{\textbf{The University of Arizona}} \hfill Tucson, AZ \\
 2023-- \hspace{0.1cm} NOAA Climate \& Global Change Postdoctoral Fellow
 % \textit{Mentor: Jessica Tierney}
@@ -128,10 +131,8 @@ Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker,
 \margintext{Education}
 \textsc{\textbf{Texas A\&M University}} \hfill College Station, TX \\
 2023 \quad Ph.D. in Oceanography (Paleoceanography/Organic Geochemistry) \\
-
 \textsc{\textbf{Chulalongkorn University}} \hfill Bangkok, Thailand \\
 2016 \quad M.S. in Petroleum Geoscience (International Program)\\
-
 \textsc{\textbf{Chulalongkorn University}} \hfill Bangkok, Thailand \\
 2013 \quad B.S. in Geology 
 
@@ -148,16 +149,15 @@ Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker,
 \margintext{Awards}
 \textsc{Fellowships and Scholarships}
 \begin{itemize}[leftmargin=*]
-    \item[] \emph{\textbf{NOAA Climate \& Global Change Postdoctoral Fellowship}}, The Cooperative Programs for the Advancement of Earth System Science (CPAESS) at the University Corporation for Atmospheric Research (UCAR), 2023–2025
-    \item[] \emph{\textbf{Texas A\&M Dissertation Fellowship}}, Texas A\&M University (TAMU), 2023–2024
+    \item[] \emph{\textbf{NOAA Climate \& Global Change Postdoctoral Fellowship}}, The Cooperative Programs for the Advancement of Earth System Science (CPAESS) at the University Corporation for Atmospheric Research (UCAR), 2023–2025. {\color{gray}\textit{Awarded up to 8 candidates worldwide annually.}}
+    \item[] \emph{\textbf{Texas A\&M Dissertation Fellowship}}, Texas A\&M University (TAMU), 2023–2024. {\color{gray}\textit{Awarded up to 15 candidates university-wide annually.}}
     \item[] \emph{\textbf{Texas Sea Grant's Grants-In-Aid Graduate Research Grant}}, Texas Sea Grant, 2022–2024
-    \item[] \emph{\textbf{Schlanger Ocean Drilling Fellowship}}, U.S. Science Support Program (USSSP) associated with the International Ocean Discovery Program (IODP), 2021–2022
+    \item[] \emph{\textbf{Schlanger Ocean Drilling Fellowship}}, U.S. Science Support Program (USSSP) associated with the International Ocean Discovery Program (IODP), 2021–2022.  {\color{gray}\textit{Awarded up to 8 candidates nationwide annually for graduate students at US academic institutions who conduct research related to the International Ocean Discovery Program and its predecessor programs.}}
     \item[] \emph{\textbf{Oceanography Graduate Scholarship}}, Department of Oceanography, TAMU, 2018–2024
-    \item[] \emph{\textbf{Fulbright Thai Graduate Scholarship}}, Thailand-U.S. Education Foundation (TUSEF), Fulbright Thailand, 2018–2020
+    \item[] \emph{\textbf{Fulbright Thai Graduate Scholarship}}, Thailand-U.S. Education Foundation (TUSEF), Fulbright Thailand, 2018–2020. {\color{gray}\textit{Awarded up to 7 candidates nationwide annually.}}
     \item[] \emph{\textbf{Chevron Thailand Graduate Scholarship}}, Chevron Thailand, 2015–2016
     \item[] \emph{\textbf{Chevron Undergraduate Scholarship}}, Chevron Thailand, 2012–2013
     \item[] \emph{\textbf{Mitsui Oil Exploration Company (MOECO) Undergraduate Scholarship}}, MOECO, 2011–2013 
-
 \end{itemize}
 
 \textsc{Travel Grants}
@@ -167,6 +167,7 @@ Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker,
     \item[] \emph{\textbf{Oceanography Graduate Council (OGC) mini-grant}}, TAMU Oceanography, 12/2019, 12/2021, 12/2022 
     \item[] \emph{\textbf{TAMU Research and Presentation Award}}, Graduate and Professional School (GPS), TAMU, 12/2019
 \end{itemize} 
+\bigskip
 \bigskip
 \textsc{Honors and Awards}
 \begin{itemize}[leftmargin=*]
@@ -217,7 +218,7 @@ Mesozoic–Cenozoic Paleoceanography/Paleoclimatology, Archaeal Lipid Biomarker,
 
 \item {\myname{rattanasriampaipong}} (2021, April). \textit{Closing the gaps of Cenozoic sea surface temperature history using tetraether archaeal lipid biomarkers}. Oral presentation for the departmental seminar at the Department of Oceanography, Texas A\&M University, TX, USA.
 
-\item {\myname{rattanasriampaipong}} and Zhang, Y. G. (2019, December). Towards complete global sea surface temperature reconstructions over the Cenozoic Era. Poster presentation at the 2019 AGU Fall Meeting, Moscone Center, San Francisco, CA, USA.
+\item {\myname{rattanasriampaipong}} and Zhang, Y. G. (2019, December). \textit{Towards complete global sea surface temperature reconstructions over the Cenozoic Era}. Poster presentation at the 2019 AGU Fall Meeting, Moscone Center, San Francisco, CA, USA.
 
 \item {\myname{rattanasriampaipong}} (2013, April). \textit{Quantification of Tsunami Magnitude from Sedimentation Modeling of Re-occurring Indian Ocean Tsunamiites at Phra Thong Island, Phang Nga, Thailand}. Oral Presentation at the annual Hitachi Senior Project Competition, Faculty of Science, Chulalongkorn University, Thailand.
 \end{etaremune}
